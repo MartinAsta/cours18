@@ -15,4 +15,22 @@
     <button type="button" id="btnIn">Go</button>
 </body>
 
+<script>
+
+    function play() {
+        let a = document.getElementById("pf").value
+        let x = Math.random();
+        if (x >= 0.5) {
+            r = "p";
+        } else {
+            r = "f";
+        }
+            if (a == r) {
+            alert("gagné!");
+        } else {
+            alert("perdu!");
+        }
+    }
+</script>
+
 </html>
