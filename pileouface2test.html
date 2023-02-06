@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le jeu du pile ou face</title>
+</head>
+
+<body>
+    <button type="button" id="btnpile">Pile</button>
+    <button type="button" id="btnface">face</button><br>
+    <p3 id="gp">
+    </p3><br>
+    <p1 id="stats">
+        la se tiendront vos stats.
+    </p1><br>
+    <p2 id="stats2" style="color:green">
+
+    </p2>
+</body>
+
+<script>
+    let count1 = 0
+    let count2 = 0
+    document.getElementById("btnpile").addEventListener("click", play);
+    document.getElementById("btnface").addEventListener("click", play);
+    function play() {
+        let x = Math.random();
+        if (x >= 0.5) {
+            document.getElementById("gp").innerHTML = "gagné!";
+            count1++
+            count2++
+        } else {
+            document.getElementById("gp").innerHTML = "perdu!";
+            count2++
+        }
+        document.getElementById("stats").innerHTML = "vous avez gagné " + count1 + " fois sur " + count2 + " essais." 
+        document.getElementById("stats2").innerHTML = "ce qui fait un taux de victoire de " + count1/count2*100 + " %"
+        if (count1/count2*100 < 50){
+            document.getElementById("stats2").style.color = "red"
+        } else {
+            document.getElementById("stats2").style.color = "green"
+        }
+    }
+</script>
+
+</html>
