@@ -12,24 +12,34 @@
         pile ou face ?
     </p>
     <input type="text" id="pf"></input>
-    <button type="button" id="btnIn">Go</button>
+    <button type="button" id="btnIn">Go</button><br>
+    <p1 id="stats">
+        la se tiendront vos stats.
+    </p1>
 </body>
 
 <script>
-
+    let count1 = 0
+    let count2 = 0
+    document.getElementById("btnIn").addEventListener("click", play)
     function play() {
         let a = document.getElementById("pf").value
         let x = Math.random();
         if (x >= 0.5) {
-            r = "p";
+            r = "pile";
         } else {
-            r = "f";
+            r = "face";
         }
             if (a == r) {
             alert("gagné!");
+            count1++
+            count2++
         } else {
             alert("perdu!");
+            count2++
         }
+        document.getElementById("pf").value = ""
+        document.getElementById("stats").value = "vous avez gagné " + count1 + " fois sur " + count2 + " essais."
     }
 </script>
 
