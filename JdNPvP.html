@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" href="img/faviconJdN.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeu de Nim</title>
+    <title>PvP</title>
     <link rel="stylesheet" href="styles/JdN.css">
 </head>
 
 <body id="body">
-    <h1 class="header">A quel mode de jeu désirez-vous jouer ?</h1>
-    <br>
-    <ul>
-        <button class="btnGM">Contre un ami</button><br>
-        <button class="btnGM">Contre un robot (jouer en 1er)</button><br>
-        <button class="btnGM">Contre un robot (jouer en 2e)</button>
-    </ul>
+    <a href="JdNIndex.html" class="btnLobby">Accueil</a><br><br><br><br><br><br><br><br><br><br><br>
+
+    <label for="fname" class="inputPvP" id="askName">Joueur 1 :</label>
+    <input type="text" id="player1" name="fname" class="inputPvP"><br><br>
+    <label for="lname" class="inputPvP" id="askName2">Joueur 2</label>
+    <input type="text" id="player2" name="lname" class="inputPvP"><br><br>
+    <button onclick="jdNPvP()" class="btnPvP" id="btnPvPID">Commencer</button>
+
+    <label for="askPlayPvP" class="inputPvP" id="askPlay" style="display: none;">Combien de bâtonnet(s) voulez-vous prendre ? (entre 1 et 3)</label><br>
+    <input type="text" id="nextPlay" name="askPlayPvP" class="inputPvP" style="display: none;"><br><br>
+    <button onclick="jdNPvP()" class="btnAskPlayPvP" id="btnAskPlayPvP" style="display: none;">Prendre</button><br>
+    <p1 id="flowOfGame"></p1>
 
     <script src="JeuDeNim.js"></script>
 </body>

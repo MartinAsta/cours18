@@ -21,10 +21,68 @@ body{
     text-decoration: none;
     width: 300px;
     color: inherit;
+    cursor: pointer;
 }
 
 .btnGM:hover,
 .btnGM:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.btnLobby{
+    top: 0px;
+    text-decoration: none;
+    color: rgb(169, 169, 169);
+    padding-left: 20px;
+}
+
+.inputPvP{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    display: grid;
+}
+
+.btnPvP{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(180, 153, 153);
+    text-decoration: none;
+    width: 150px;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btnPvP:hover,
+.btnPvP:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.btnAskPlayPvP{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(180, 153, 153);
+    text-decoration: none;
+    width: 150px;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btnAskPlayPvP:hover,
+.btnAskPlayPvP:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
