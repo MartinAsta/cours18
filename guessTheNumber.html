@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <p>
+        Jouez au juste prix, trouver le bon nombre entre 1 et 100<br>
+        Quel est votre chiffre ?
+    </p>
+    <input type="text" id="try"></input>
+    <button type="button" id="btnIn">OK</button><br>
+    <p1 id="text">
+        Voici vos tentatives précédentes :
+    </p1><br>
+    <p2 id="oldtry"></p2>
+
+</body>
+
+<script>
+var a = Math.round(Math.random(100) * 100);
+var i = 0;
+document.getElementById("btnIn").addEventListener("click", look);
+
+function look () {
+    var b = document.getElementById("try").value;
+        if (i == 14) {
+            alert("c'est perdu, vous avez dépassé le nomre d'essais maximum, le bon chiffre était " + a);
+        }
+        if (b > a) {
+            document.getElementById("oldtry").innerHTML += "c'est moins que " + b + "<br>";
+            i++;
+            document.getElementById("try").value = "";
+        } else if (b < a) {
+            document.getElementById("oldtry").innerHTML += "c'est plus que " + b + "<br>";
+            i++;
+            document.getElementById("try").value = "";
+        } else if (a == b) {
+            alert("vous avez gagné en " + i + " essais, " + a + " était le bon chiffre!");
+        }  
+}
+</script>
+
+</html>
