@@ -16,7 +16,7 @@
     <p1 id="stats">
         la se tiendront vos stats.
     </p1><br>
-    <p2 id="stats2">
+    <p2 id="stats2" style="color:green">
 
     </p2>
 </body>
@@ -44,6 +44,11 @@
         document.getElementById("pf").value = ""
         document.getElementById("stats").innerHTML = "vous avez gagné " + count1 + " fois sur " + count2 + " essais." 
         document.getElementById("stats2").innerHTML = "ce qui fait un taux de victoire de " + count1/count2*100 + " %"
+        if (count1/count2*100 < 50){
+            document.getElementById("stats2").style.color = "red"
+        } else {
+            document.getElementById("stats2").style.color = "green"
+        }
     }
 </script>
 
