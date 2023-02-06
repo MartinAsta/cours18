@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(116, 98, 98);
+    background: linear-gradient(90deg, rgba(44,44,44,1) 0%, rgba(146,136,125,1) 100%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.header{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btnGM{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(180, 153, 153);
+    text-decoration: none;
+    width: 300px;
+    color: inherit;
+}
+
+.btnGM:hover,
+.btnGM:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
