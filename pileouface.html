@@ -15,7 +15,10 @@
     <button type="button" id="btnIn">Go</button><br>
     <p1 id="stats">
         la se tiendront vos stats.
-    </p1>
+    </p1><br>
+    <p2 id="stats2">
+
+    </p2>
 </body>
 
 <script>
@@ -39,7 +42,8 @@
             count2++
         }
         document.getElementById("pf").value = ""
-        document.getElementById("stats").value = "vous avez gagné " + count1 + " fois sur " + count2 + " essais."
+        document.getElementById("stats").innerHTML = "vous avez gagné " + count1 + " fois sur " + count2 + " essais." 
+        document.getElementById("stats2").innerHTML = "ce qui fait un taux de victoire de " + count1/count2*100 + " %"
     }
 </script>
 
